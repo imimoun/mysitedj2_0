@@ -12,6 +12,4 @@ install:
 before_script:
   - psql -c 'create database default;' -U postgres
 script:
-  adapter: postgresql
-  database: travis_ci_test
   - python manage.py test
