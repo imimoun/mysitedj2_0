@@ -8,7 +8,7 @@ addons:
   postgresql: "9.6"
 install:
   - sudo apt-get update
-  - pip install -r mysitedj2_0.requirements.travis
+  - pip install -r requirements/travis.txt
 script:
   - export DJANGO_SETTINGS_MODULE=mysitedj2_0.settings.travis
   - export PATH_TO_MANAGE="$(dirname "$(find . -type f -name 'manage.py')")"
