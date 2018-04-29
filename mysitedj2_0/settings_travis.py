@@ -1,6 +1,8 @@
 # coding: utf-8
 """Settings for Travis."""
 
+from .settings_base import * # noqa
+
 # List: use split for getting a list
 ALLOWED_HOSTS = ["*"]
 
