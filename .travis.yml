@@ -1,15 +1,18 @@
-sudo: required
 language: python
 python:
   - "3.6.3"
-services:
-  - postgresql
+services: postgresql
 addons:
   postgresql: "10.3"
+before_install:
+  - export DJANGO_SETTINGS_MODULE=mysitedj2_0.settings
+  - export PYTHONPATH=$HOME/builds/imimoun/mysitedj2_0
+  - export PIP_USE_MIRRORS=true
 install:
   - sudo apt-get update
   - pip install -r requirements.txt
 before_script:
+  - psql -c "CREATE DATABASE mydb;" -U postgres
   - psql -c 'create database default;' -U postgres
 script:
   - python manage.py test
