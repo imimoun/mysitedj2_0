@@ -5,11 +5,13 @@ python:
 services:
   - postgresql
 addons:
-  postgresql: "9.6"
+  postgresql: "10.3"
 install:
   - sudo apt-get update
   - pip install -r requirements.txt
+before_script:
+  - psql -c 'create database default;' -U postgres
 script:
-  - export PATH_TO_MANAGE="$(dirname "$(find . -type f -name 'manage.py')")"
-  - cd $PATH_TO_MANAGE
+  adapter: postgresql
+  database: travis_ci_test
   - python manage.py test
