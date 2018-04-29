@@ -10,7 +10,7 @@ TEMPLATE_DEBUG = True
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'travis_ci_db',
         'USER': 'travis',
         'PASSWORD': '',
