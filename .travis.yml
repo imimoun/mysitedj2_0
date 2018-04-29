@@ -10,7 +10,7 @@ install:
   - sudo apt-get update
   - pip install -r requirements.txt
 script:
-  - export DJANGO_SETTINGS_MODULE=mysitedj2_0.settings_travis
+  - export DJANGO_SETTINGS_MODULE=mysitedj2_0.mysitedj2_0.settings_travis
   - export PATH_TO_MANAGE="$(dirname "$(find . -type f -name 'manage.py')")"
   - cd $PATH_TO_MANAGE
   - python manage.py test
