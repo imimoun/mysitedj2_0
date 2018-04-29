@@ -13,4 +13,4 @@ script:
   - export DJANGO_SETTINGS_MODULE=mysitedj2_0.settings.travis
   - export PATH_TO_MANAGE="$(dirname "$(find . -type f -name 'manage.py')")"
   - cd $PATH_TO_MANAGE
-  - python manage.py test --settings==mysitedj2_0.settings.travis
+  - python manage.py test --settings=mysitedj2_0.settings.travis
