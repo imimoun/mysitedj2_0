@@ -1,0 +1,10 @@
+{
+"DJANGO_SECRET": "m9iiz!cg(l^3aey(ool57y8cwoe@uq=io(cl7(r2kwq36@*#a2",
+"ALLOWED_HOSTS": ["*"],
+"INTERNAL_IPS": [""],
+"DEFAULT_DATABASE_NAME": "patient_engine_test",
+"DEFAULT_DATABASE_USER": "postgres",
+"DEFAULT_DATABASE_PASSWORD": "",
+"DEFAULT_DATABASE_HOST": "localhost",
+"DEFAULT_DATABASE_PORT": "5432"
+}
