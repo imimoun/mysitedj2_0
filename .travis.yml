@@ -3,7 +3,7 @@ python:
   - "3.6.3"
 services: postgresql
 addons:
-  postgresql: "10.3"
+  postgresql: "9.2"
 before_install:
   - export DJANGO_SETTINGS_MODULE=mysitedj2_0.settings
   - export PYTHONPATH=$HOME/builds/imimoun/mysitedj2_0
