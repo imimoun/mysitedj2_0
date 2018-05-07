@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
-from blog import views as blog_v
+from django.views.generic.base import TemplateView
 
 urlpatterns = [
-    path('', blog_v.index, name='blog_home'),
+    path('', TemplateView.as_view(template_name='index.html'), name='index_bootstramp'),
     path('admin/', admin.site.urls),
 ]
