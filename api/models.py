@@ -4,20 +4,14 @@ import uuid
 from django.db import models
 
 
-def get_uuid():
-    """Return an uuid without hyphen."""
-    return str(uuid.uuid4().hex)
-
-
 class UUIDModel(models.Model):
-    uuid = models.CharField(unique=True, max_length=32, default=get_uuid, editable=False)
+    uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
 
     class Meta:
         abstract = True
 
 
 class Client(UUIDModel):
-    id = models.AutoField(primary_key=True, default=None)
     first_name = models.CharField(verbose_name='Prénom', max_length=255)
     last_name = models.CharField(verbose_name='Nom', max_length=255)
     city = models.CharField(verbose_name='Ville', max_length=255)
