@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 APPS = [
     'blog',
+    'api',
 ]
 
 INSTALLED_APPS = [
