@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 APPS = [
     'blog',
+    'api',
 ]
 
 INSTALLED_APPS = [
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 ] + APPS
 
 MIDDLEWARE = [
@@ -132,3 +134,14 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(REPO_DIR, 'static'),
 )
+
+# Django-Rest-framework config:
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+       'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    )
+}
