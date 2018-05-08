@@ -15,3 +15,4 @@ This website is a website test. It used to test things in python 3 and django 2.
 
 ## Pages
 1. [Import project](https://github.com/imimoun/mysitedj2_0/wiki/Import-project): Your are new in this project. You have to configure your environement and to import this project in your computer. Here the tutorial.
+1. [Bootstrap theme](https://github.com/imimoun/mysitedj2_0/blob/master/static/clean-blog/README.md): The README.md of our bootstrap theme.
