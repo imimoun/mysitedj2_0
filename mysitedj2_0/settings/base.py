@@ -80,16 +80,14 @@ WSGI_APPLICATION = 'mysitedj2_0.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-with open(BASE_DIR + '/json/db_config_local.json') as f:
-    db_config = json.load(f)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': db_config['NAME'],
-        'USER': db_config['USER'],
-        'PASSWORD': db_config['PASSWORD'],
-        'HOST': db_config['HOST'],
-        'PORT': db_config['PORT'],
+        'NAME': 'READ_THE_README.md',
+        'USER': 'READ_THE_README.md',
+        'PASSWORD': 'READ_THE_README.md',
+        'HOST': 'READ_THE_README.md',
+        'PORT': 'READ_THE_README.md',
     }
 }
 
