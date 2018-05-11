@@ -15,7 +15,7 @@ django_heroku.settings(locals())
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-db_config = read_json_file(s_base.BASE_DIR + '/json/db_config_prod.json')
+db_config = read_json_file(s_base.BASE_DIR + '/json/db_config_dev.json')
 
 DATABASES = {
     'default': {
