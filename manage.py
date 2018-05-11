@@ -3,7 +3,11 @@ import os
 import sys
 
 if __name__ == "__main__":
-    if 'HEROKU_RUNNING' in locals() or 'HEROKU_RUNNING' in globals():
+    on_heroku = False
+    if 'HEROKU_RUNNING' in os.environ:
+        on_heroku = True
+
+    if on_heroku:
         os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysitedj2_0.settings.heroku")
     else:
         os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysitedj2_0.settings.local")
