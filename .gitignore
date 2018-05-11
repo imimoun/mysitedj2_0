@@ -1,4 +1,4 @@
 # db.sqlite3
 __pycache__
 startbootstrap-clean-blog-gh-pages
-mysitedj2_0/settings/local.py
+mysitedj2_0/json/db_config_local.json

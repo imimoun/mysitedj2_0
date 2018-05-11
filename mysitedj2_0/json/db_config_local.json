@@ -1,8 +1,7 @@
 {
-      "ENGINE": "django.db.backends.postgresql",
-      "NAME": "mysitedj2_0",
-      "USER": "ilanmimoun",
-      "PASSWORD": "",
-      "HOST": "localhost",
-      "PORT": "5433"
+    "NAME": "mysitedj2_0",
+    "USER": "ilanmimoun",
+    "PASSWORD": "",
+    "HOST": "localhost",
+    "PORT": "5433"
 }

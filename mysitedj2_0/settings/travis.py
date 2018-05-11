@@ -2,6 +2,7 @@
 """Settings for Travis."""
 
 from mysitedj2_0.utils import read_json_file
+from mysitedj2_0.settings.base import *  # noqa
 import mysitedj2_0.settings.base as s_base
 
 SECRET_KEY = "tlt#^9^3gg-jqm+qr__sp58$&k*8u92hyz2r1&c2iziay@on9m"

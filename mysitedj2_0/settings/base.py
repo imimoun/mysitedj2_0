@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
-import json
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -90,7 +89,6 @@ DATABASES = {
         'PORT': 'READ_THE_README.md',
     }
 }
-
 
 
 # Password validation

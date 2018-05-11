@@ -1,5 +1,4 @@
 {
-    "ENGINE": "django.db.backends.postgresql",
     "NAME": "dc23utbh1vi2v2",
     "USER": "kyorgvxewlksou",
     "PASSWORD": "150a4c01f2c90d4112c8f1a39c85e9e21ccfa5e2b71160a0245fb08ed8413da6",
