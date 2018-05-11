@@ -2,6 +2,7 @@
 """Settings for Heroku."""
 
 from mysitedj2_0.utils import read_json_file
+from mysitedj2_0.settings.base import *
 import mysitedj2_0.settings.base as s_base
 
 import django_heroku
