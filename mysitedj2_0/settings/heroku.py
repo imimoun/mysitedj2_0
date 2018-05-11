@@ -1,7 +1,8 @@
 # coding: utf-8
 """Settings for Heroku."""
 
-from mysitedj2_0.settings.base import * # noqa
+from mysitedj2_0.utils import read_json_file
+import mysitedj2_0.settings.base as s_base
 
 import django_heroku
 
@@ -14,12 +15,15 @@ django_heroku.settings(locals())
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+db_config = read_json_file(s_base.BASE_DIR + '/json/db_config_prod.json')
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dc23utbh1vi2v2',
-        'USER': 'kyorgvxewlksou',
-        'PASSWORD': '150a4c01f2c90d4112c8f1a39c85e9e21ccfa5e2b71160a0245fb08ed8413da6',
-        'HOST': 'ec2-174-129-41-64.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'NAME': db_config['NAME'],
+        'USER': db_config['USER'],
+        'PASSWORD': db_config['PASSWORD'],
+        'HOST': db_config['HOST'],
+        'PORT': db_config['PORT'],
     }
+}
