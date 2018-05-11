@@ -7,9 +7,9 @@ if __name__ == "__main__":
     if 'IN_HEROKU' in os.environ:
         on_heroku = True
         if 'STATE_APP' in os.environ:
-            if STATE_APP == 'dev':
+            if os.environ['STATE_APP'] == 'dev':
                 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysitedj2_0.settings.heroku_dev")
-            elif STATE_APP == 'prod':
+            elif os.environ['STATE_APP'] == 'prod':
                 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysitedj2_0.settings.heroku_prod")
             else:
                 raise ValueError('ERROR: variable STATE_APP have to be init in heroku settings')
