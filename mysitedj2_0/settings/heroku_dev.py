@@ -28,4 +28,3 @@ DATABASES = {
         'PORT': db_config['PORT'],
     }
 }
-print(DATABASES)
