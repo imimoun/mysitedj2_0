@@ -10,9 +10,6 @@ import django_heroku
 SECRET_KEY = "2!fdh26q0ok21(3+5m&=-(45w&cxpsr8ay_ut0t%nz^y=z@m*!"
 DEBUG = False
 
-# Configure Django App for Heroku.
-django_heroku.settings(locals())
-
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
@@ -28,3 +25,7 @@ DATABASES = {
         'PORT': db_config['PORT'],
     }
 }
+
+
+# Configure Django App for Heroku.
+django_heroku.settings(locals())
