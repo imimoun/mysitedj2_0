@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'mysitedj2_0.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mysitedj2_0',
-        'USER': 'ilanmimoun',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': 'READ_THE_README.md',
+        'USER': 'READ_THE_README.md',
+        'PASSWORD': 'READ_THE_README.md',
+        'HOST': 'READ_THE_README.md',
+        'PORT': 'READ_THE_README.md',
     }
 }
 
