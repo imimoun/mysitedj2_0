@@ -1,15 +1,19 @@
 # coding: utf-8
-"""Settings for Travis."""
+"""Settings for Heroku."""
 
 from mysitedj2_0.utils import read_json_file
 from mysitedj2_0.settings.base import *  # noqa
 import mysitedj2_0.settings.base as s_base
 
-SECRET_KEY = "tlt#^9^3gg-jqm+qr__sp58$&k*8u92hyz2r1&c2iziay@on9m"
-DEBUG = False
-TEMPLATE_DEBUG = True
+import django_heroku
 
-db_config = read_json_file(s_base.BASE_DIR + '/json/db_config_travis.json')
+SECRET_KEY = "2!fdh26q0ok21(3+5m&=-(45w&cxpsr8ay_ut0t%nz^y=z@m*!"
+DEBUG = False
+
+# Database
+# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+
+db_config = read_json_file(s_base.BASE_DIR + '/json/db_config_dev.json')
 
 DATABASES = {
     'default': {
@@ -18,5 +22,9 @@ DATABASES = {
         'USER': db_config['USER'],
         'PASSWORD': db_config['PASSWORD'],
         'HOST': db_config['HOST'],
+        'PORT': db_config['PORT'],
     }
 }
+
+# Configure Django App for Heroku.
+django_heroku.settings(locals())
