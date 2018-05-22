@@ -3,11 +3,11 @@
   </head>
   <body>
     <table>
-      {% for i in 15 %}
+      {% for i in "x"|ljust:"15" %}
       <tr>
-        {% for i in 15 %}
+        {% for j in "x"|ljust:"15" %}
         <td>
-          Nothing
+          [{{ forloop.counter }};{{ forloop.parentloop.counter }}]
         </td>
         {% endfor %}
       </tr>
