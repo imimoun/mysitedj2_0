@@ -1,0 +1,35 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          abcde
+        </td>
+        <td>
+          Player 1 <br />
+          <input id="player1_valide" type="button" value="Valide" />
+        </td>
+        <td>
+          fghi
+        </td>
+        <td>
+          Player 2 <br />
+          <input id="player2_valide" type="button" value="Valide" />
+        </td>
+      </tr>
+    </table>
+    <table>
+      {% for i in "x"|ljust:"15" %}
+      <tr>
+        {% for j in "x"|ljust:"15" %}
+        <td>
+          [{{ forloop.counter }};{{ forloop.parentloop.counter }}]
+        </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

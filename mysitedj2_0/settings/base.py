@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 APPS = [
     'blog',
     'api',
+    'scrabble',
 ]
 
 INSTALLED_APPS = [
@@ -60,7 +61,7 @@ ROOT_URLCONF = 'mysitedj2_0.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['blog/template'],
+        'DIRS': ['blog/template', 'scrabble/template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
