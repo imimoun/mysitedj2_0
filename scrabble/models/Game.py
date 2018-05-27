@@ -1,3 +1,4 @@
+from django.contrib.postgres.fields import ArrayField
 from django.db import models
 
 from scrabble.models.Token import Token
@@ -16,18 +17,19 @@ class Game(models.Model):
     Player_2 = models.ForeignKey(
         'Player',
         on_delete=models.CASCADE,
+        related_name="%(app_label)s_%(class)s_related"
     )
-    Hand_player_1 = models.ArrayField(
-        models.CharField(choices=[(tag, tag.value) for tag in Token]),
+    Hand_player_1 = ArrayField(
+        models.CharField(max_length=7, choices=Token.choices()),
         size=7,
     )
-    Hand_player_2 = models.ArrayField(
-        models.CharField(choices=[(tag, tag.value) for tag in Token]),
+    Hand_player_2 = ArrayField(
+        models.CharField(max_length=7, choices=Token.choices()),
         size=7,
     )
-    GameBoard = models.ArrayField(
-        models.ArrayField(
-            models.CharField(choices=[(tag, tag.value) for tag in Token]),
+    GameBoard = ArrayField(
+        ArrayField(
+            models.CharField(max_length=7, choices=Token.choices()),
             size=15,
         ),
         size=15,
