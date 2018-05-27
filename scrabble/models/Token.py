@@ -29,3 +29,7 @@ class Token(Enum):   # A subclass of Enum
     Token_X = 10
     Token_Y = 10
     Token_Z = 10
+
+    @classmethod
+    def choices(cls):
+        return tuple((x.value, x.name) for x in cls)
