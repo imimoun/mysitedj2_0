@@ -25,7 +25,6 @@ class Game(models.Model):
         models.CharField(choices=[(tag, tag.value) for tag in Token]),
         size=7,
     )
-    name = models.CharField(max_length=100)
     GameBoard = models.ArrayField(
         models.ArrayField(
             models.CharField(choices=[(tag, tag.value) for tag in Token]),
