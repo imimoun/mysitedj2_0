@@ -5,26 +5,26 @@ from scrabble.models.Token import Token
 
 
 class Game(models.Model):
-    ID_game = models.AutoField(primary_key=True)
-    ID_deck = models.PositiveIntegerField()
-    Player_1 = models.ForeignKey(
+    id_game = models.AutoField(primary_key=True)
+    id_deck = models.PositiveIntegerField()
+    player_1 = models.ForeignKey(
         'Player',
         on_delete=models.CASCADE,
     )
-    Player_2 = models.ForeignKey(
+    player_2 = models.ForeignKey(
         'Player',
         on_delete=models.CASCADE,
         related_name="%(app_label)s_%(class)s_related"
     )
-    Hand_player_1 = ArrayField(
+    hand_player_1 = ArrayField(
         models.CharField(max_length=7, choices=Token.choices()),
         size=7,
     )
-    Hand_player_2 = ArrayField(
+    hand_player_2 = ArrayField(
         models.CharField(max_length=7, choices=Token.choices()),
         size=7,
     )
-    GameBoard = ArrayField(
+    gameboard = ArrayField(
         ArrayField(
             models.CharField(max_length=7, choices=Token.choices()),
             size=15,

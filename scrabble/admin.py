@@ -7,20 +7,20 @@ from scrabble.models.Player import Player
 
 
 class PlayerAdmin(admin.ModelAdmin):
-    list_display = ("ID_player", "name", )
-    ordering = ("ID_player", "name", )
+    list_display = ("id_player", "name", )
+    ordering = ("id_player", "name", )
 
 
 class DeckAdmin(admin.ModelAdmin):
-    list_display = ("ID_token", "ID_deck", "token", )
-    ordering = ("ID_token", "ID_deck", "token", )
-    search_fields = ("ID_deck", "token", )
+    list_display = ("id_token", "id_deck", "token", )
+    ordering = ("id_token", "id_deck", "token", )
+    search_fields = ("id_deck", "token", )
 
 
 class GameAdmin(admin.ModelAdmin):
-    list_display = ("ID_game", "ID_deck", "Player_1", "Player_2", "Hand_player_1", "Hand_player_2", "GameBoard", )
-    ordering = ("ID_game", "ID_deck", "Player_1", "Player_2", "Hand_player_1", "Hand_player_2", "GameBoard", )
-    search_fields = ("Player_1", "Player_2", )
+    list_display = ("id_game", "id_deck", "player_1", "player_2", "hand_player_1", "hand_player_2", "gameboard", )
+    ordering = ("id_game", "id_deck", "player_1", "player_2", "hand_player_1", "hand_player_2", "gameboard", )
+    search_fields = ("player_1", "player_2", )
 
 
 admin.site.register(Player, PlayerAdmin)
