@@ -32,4 +32,4 @@ class Token(Enum):   # A subclass of Enum
 
     @classmethod
     def choices(cls):
-        return tuple((x.value, x.name) for x in cls)
+        return tuple((token[1].value, token[0]) for token in cls.__members__.items())
