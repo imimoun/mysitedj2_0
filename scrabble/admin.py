@@ -18,8 +18,8 @@ class DeckAdmin(admin.ModelAdmin):
 
 
 class GameAdmin(admin.ModelAdmin):
-    list_display = ("ID_game", "Deck", "Player_1", "Player_2", "Hand_player_1", "Hand_player_2", "GameBoard", )
-    ordering = ("ID_game", "Deck", "Player_1", "Player_2", "Hand_player_1", "Hand_player_2", "GameBoard", )
+    list_display = ("ID_game", "ID_deck", "Player_1", "Player_2", "Hand_player_1", "Hand_player_2", "GameBoard", )
+    ordering = ("ID_game", "ID_deck", "Player_1", "Player_2", "Hand_player_1", "Hand_player_2", "GameBoard", )
     search_fields = ("Player_1", "Player_2", )
 
 

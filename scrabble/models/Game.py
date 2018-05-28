@@ -6,10 +6,7 @@ from scrabble.models.Token import Token
 
 class Game(models.Model):
     ID_game = models.AutoField(primary_key=True)
-    Deck = models.ForeignKey(
-        'Deck',
-        on_delete=models.CASCADE,
-    )
+    ID_deck = models.PositiveIntegerField()
     Player_1 = models.ForeignKey(
         'Player',
         on_delete=models.CASCADE,
