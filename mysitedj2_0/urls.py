@@ -17,15 +17,10 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views.generic.base import TemplateView
 
-
-from api import views
-
 urlpatterns = [
-    path('client', views.ClientList.as_view(), name='client-list'),
-    path('client/<uuid:uuid>', views.ClientDetail.as_view(), name='client-detail'),
-    path('api-auth/', include('rest_framework.urls')),
+    path('api/', include('api.urls')),
+    path('blog/', include('blog.urls')),
     path('scrabble/', include('scrabble.urls')),
-    path('blog/', TemplateView.as_view(template_name='index_blog.html')),
     path('', TemplateView.as_view(template_name='index.html')),
     path('admin/', admin.site.urls),
 ]
