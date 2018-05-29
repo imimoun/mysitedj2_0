@@ -61,7 +61,7 @@ ROOT_URLCONF = 'mysitedj2_0.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['blog/template', 'scrabble/template'],
+        'DIRS': ['mysitedj2_0/template', 'blog/template', 'scrabble/template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
