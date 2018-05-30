@@ -1,6 +1,8 @@
 from django.urls import path
-from django.views.generic.base import TemplateView
+
+from scrabble import views
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='gameboard.html'), name='index-scrabble'),
+    path('gameboard/<int:id_gameboard>/<int:id_player>', views.gameboard, name='gameboard'),
+    path('', views.index, name='index-scrabble'),
 ]

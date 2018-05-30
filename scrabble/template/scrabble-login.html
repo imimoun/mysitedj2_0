@@ -3,15 +3,20 @@
 </head>
 <body>
   <form method="post" action=".">
-    Select your player:
-    <select id="player">
-    {% for player in list_all_player %}
-      <option value="{{ player.id }}" name="player_name" >{{ player.name }}</option>
-    {% endfor %}
-    </select>
-    Join/Create a new party:
-    <input id="gameboard" type="text" name="gameboard" />
-  <input type="submit" value="Valide" />
+    {% csrf_token %}
+    <p>
+      Select your player:
+      <select id="player" name="id_player">
+      {% for player in list_all_player %}
+        <option value="{{ player.id_player }}" >{{ player.name }}</option>
+      {% endfor %}
+      </select>
+    </p>
+    <p>
+      Join/Create a new party:
+      <input id="id_gameboard" type="text" name="id_gameboard" />
+    </p>
+    <input type="submit" value="Valide" />
   </form>
 </body>
 </html>
