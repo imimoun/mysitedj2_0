@@ -1,0 +1,17 @@
+<html>
+<head>
+</head>
+<body>
+  <form method="post" action=".">
+    Select your player:
+    <select id="player">
+    {% for player in list_all_player %}
+      <option value="{{ player.id }}" name="player_name" >{{ player.name }}</option>
+    {% endfor %}
+    </select>
+    Join/Create a new party:
+    <input id="gameboard" type="text" name="gameboard" />
+  <input type="submit" value="Valide" />
+  </form>
+</body>
+</html>
