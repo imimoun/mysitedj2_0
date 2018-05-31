@@ -4,14 +4,14 @@ from scrabble.models.Player import Player
 
 
 def index(request):
-    """ User choose his id_player and a id_gameboard to play. """
+    """ User choose his id_player and a id_game to play. """
     list_all_player = Player.objects.all()
-    if request.POST and request.POST["id_player"] and request.POST["id_gameboard"]:
+    if request.POST and request.POST["id_player"] and request.POST["id_game"]:
         id_player = request.POST["id_player"]
-        id_gameboard = request.POST["id_gameboard"]
+        id_game = request.POST["id_game"]
 
         return redirect('gameboard',
-                        id_gameboard=id_gameboard,
+                        id_game=id_game,
                         id_player=id_player)
 
     return render(request, 'scrabble-login.html', {
@@ -19,6 +19,6 @@ def index(request):
     })
 
 
-def gameboard(request, id_gameboard, id_player):
+def gameboard(request, id_game, id_player):
     """ Check if ids exist. Create and init gameboard if it doesn't. """
     return render(request, 'gameboard.html')
