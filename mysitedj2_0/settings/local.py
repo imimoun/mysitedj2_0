@@ -8,7 +8,7 @@ SECRET_KEY = "tlt#^9^3gg-jqm+qr__sp58$&k*8u92hyz2r1&c2iziay@on9m"
 DEBUG = True
 TEMPLATE_DEBUG = True
 
-db_config = read_json_file('mysitedj2_0/settings/json/db_config_local.json')
+db_config = read_json_file('mysitedj2_0/json/db_config_local.json')
 
 DATABASES = {
     'default': {
