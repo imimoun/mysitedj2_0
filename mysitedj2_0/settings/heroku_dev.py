@@ -3,7 +3,6 @@
 
 from mysitedj2_0.utils import read_json_file
 from mysitedj2_0.settings.base import *  # noqa
-import mysitedj2_0.settings.base as s_base
 
 import django_heroku
 
@@ -13,7 +12,7 @@ DEBUG = False
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-db_config = read_json_file(s_base.BASE_DIR + '/json/db_config_dev.json')
+db_config = read_json_file('mysitedj2_0/settings/json/db_config_dev.json')
 
 DATABASES = {
     'default': {

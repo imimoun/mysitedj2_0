@@ -3,13 +3,12 @@
 
 from mysitedj2_0.utils import read_json_file
 from mysitedj2_0.settings.base import *  # noqa
-import mysitedj2_0.settings.base as s_base
 
 SECRET_KEY = "tlt#^9^3gg-jqm+qr__sp58$&k*8u92hyz2r1&c2iziay@on9m"
 DEBUG = False
 TEMPLATE_DEBUG = True
 
-db_config = read_json_file(s_base.BASE_DIR + '/json/db_config_travis.json')
+db_config = read_json_file('mysitedj2_0/settings/json/db_config_travis.json')
 
 DATABASES = {
     'default': {
