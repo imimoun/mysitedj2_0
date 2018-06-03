@@ -3,7 +3,7 @@
   "id_token": 1,
   "fields": {
     "id_deck": "1",
-    "token": "q"
+    "token": "token_Q"
   }
 },
 {
@@ -11,7 +11,7 @@
   "id_token": 2,
   "fields": {
     "id_deck": "1",
-    "token": "a"
+    "token": "token_A"
   }
 },
 {
@@ -19,7 +19,7 @@
   "id_token": 3,
   "fields": {
     "id_deck": "1",
-    "token": "n"
+    "token": "token_N"
   }
 },
 {
@@ -27,7 +27,7 @@
   "id_token": 4,
   "fields": {
     "id_deck": "1",
-    "token": "n"
+    "token": "token_N"
   }
 },
 {
@@ -35,7 +35,7 @@
   "id_token": 5,
   "fields": {
     "id_deck": "1",
-    "token": "f"
+    "token": "token_F"
   }
 },
 {
@@ -43,7 +43,7 @@
   "id_token": 6,
   "fields": {
     "id_deck": "1",
-    "token": "e"
+    "token": "token_E"
   }
 },
 {
@@ -51,7 +51,7 @@
   "id_token": 7,
   "fields": {
     "id_deck": "1",
-    "token": "t"
+    "token": "token_T"
   }
 },
 {
@@ -59,7 +59,7 @@
   "id_token": 8,
   "fields": {
     "id_deck": "1",
-    "token": "m"
+    "token": "token_M"
   }
 },
 {
@@ -67,7 +67,7 @@
   "id_token": 9,
   "fields": {
     "id_deck": "1",
-    "token": "b"
+    "token": "token_B"
   }
 },
 {
@@ -75,7 +75,7 @@
   "id_token": 10,
   "fields": {
     "id_deck": "1",
-    "token": "b"
+    "token": "token_B"
   }
 },
 {
@@ -83,7 +83,7 @@
   "id_token": 11,
   "fields": {
     "id_deck": "1",
-    "token": "e"
+    "token": "token_E"
   }
 },
 {
@@ -91,7 +91,7 @@
   "id_token": 12,
   "fields": {
     "id_deck": "1",
-    "token": "x"
+    "token": "token_X"
   }
 },
 {
@@ -99,7 +99,7 @@
   "id_token": 13,
   "fields": {
     "id_deck": "1",
-    "token": "y"
+    "token": "token_Y"
   }
 },
 {
@@ -107,7 +107,7 @@
   "id_token": 14,
   "fields": {
     "id_deck": "1",
-    "token": "e"
+    "token": "token_E"
   }
 },
 {
@@ -115,7 +115,7 @@
   "id_token": 15,
   "fields": {
     "id_deck": "1",
-    "token": "m"
+    "token": "token_M"
   }
 },
 {
@@ -123,7 +123,7 @@
   "id_token": 16,
   "fields": {
     "id_deck": "1",
-    "token": "x"
+    "token": "token_X"
   }
 },
 {
@@ -131,7 +131,7 @@
   "id_token": 17,
   "fields": {
     "id_deck": "1",
-    "token": "m"
+    "token": "token_M"
   }
 },
 {
@@ -139,7 +139,7 @@
   "id_token": 18,
   "fields": {
     "id_deck": "1",
-    "token": "m"
+    "token": "token_M"
   }
 },
 {
@@ -147,7 +147,7 @@
   "id_token": 19,
   "fields": {
     "id_deck": "1",
-    "token": "a"
+    "token": "token_A"
   }
 },
 {
@@ -155,7 +155,7 @@
   "id_token": 20,
   "fields": {
     "id_deck": "1",
-    "token": "a"
+    "token": "token_A"
   }
 }
 ]
