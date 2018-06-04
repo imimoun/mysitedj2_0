@@ -1,6 +1,8 @@
 from django.shortcuts import redirect, render
 
+from scrabble.models.Game import Game
 from scrabble.models.Player import Player
+from scrabble.utils import get_game_or_create_it
 
 
 def index(request):
@@ -21,4 +23,6 @@ def index(request):
 
 def gameboard(request, id_game, id_player):
     """ Check if ids exist. Create and init gameboard if it doesn't. """
-    return render(request, 'gameboard.html')
+    id_game = get_game_or_create_it(id_game, id_player)
+    game = Game.objects.get(id_game=id_game)
+    return render(request, 'gameboard.html', {"game": game})
