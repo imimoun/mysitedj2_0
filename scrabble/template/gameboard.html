@@ -5,14 +5,18 @@
     <table>
       <tr>
         <td>
-          abcde
+        {% for token in game.hand_player_1 %}
+          {{ token }} |
+        {% endfor %}
         </td>
         <td>
           Player 1 <br />
           <input id="player1_valide" type="button" value="Valide" />
         </td>
         <td>
-          fghi
+        {% for token in game.hand_player_2 %}
+          {{ token }} |
+        {% endfor %}
         </td>
         <td>
           Player 2 <br />
