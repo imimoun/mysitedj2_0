@@ -11,7 +11,6 @@
         </td>
         <td>
           {{ game.player_1.name }} <br />
-          <input id="player1_valide" type="button" value="Valide" />
         </td>
         <td>
         {% for token in game.hand_player_2 %}
@@ -20,21 +19,23 @@
         </td>
         <td>
           {{ game.player_2.name }} <br />
-          <input id="player2_valide" type="button" value="Valide" />
         </td>
       </tr>
     </table>
-    <table>
-      {% for line in game.gameboard %}
-      <tr>
-        {% for token in line %}
-        <td>
-          [{{ forloop.counter }};{{ forloop.parentloop.counter }}]
-          <input id="gameboard_{{ forloop.counter }}_{{ forloop.parentloop.counter }}" type="text" value="{{ token }}" size="4"/>
-        </td>
+    <form action="{% url 'user-play-turn' game.id_game current_id_player %}" method="POST">
+      <table>
+        {% for line in game.gameboard %}
+        <tr>
+          {% for token in line %}
+          <td>
+            [{{ forloop.counter }};{{ forloop.parentloop.counter }}]
+            <input id="gameboard_{{ forloop.counter }}_{{ forloop.parentloop.counter }}" type="text" value="{{ token }}" size="4"/>
+          </td>
+          {% endfor %}
+        </tr>
         {% endfor %}
-      </tr>
-      {% endfor %}
-    </table>
+      </table>
+      <input id="player_valide" type="button" value="Valide" />
+    </form>
   </body>
 </html>
