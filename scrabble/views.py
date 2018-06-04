@@ -25,4 +25,52 @@ def gameboard(request, id_game, id_player):
     """ Check if ids exist. Create and init gameboard if it doesn't. """
     id_game = get_game_or_create_it(id_game, id_player)
     game = Game.objects.get(id_game=id_game)
-    return render(request, 'gameboard.html', {"game": game})
+    # import pdb; pdb.set_trace()
+    return render(request, 'gameboard.html', {
+        "game": game,
+        "current_id_player": id_player
+    })
+
+
+def user_play_turn(request, id_game, id_player):
+    """ A player play an valide. Check the word. Save on database. Redirect to gameboard. """
+    game = Game.objects.get(id_game=id_game)
+    # Check tokens played was in hand else raise error
+    # token_proposed_by_player = token_proposed(id_game, id_player)
+    # tokens_are_align_horizontal = are_align_horizontal(token_proposed_by_player)
+    # tokens_are_align_vertical = are_align_vertical(token_proposed_by_player)
+    #
+    # if (tokens_are_align_horizontal or tokens_are_align_vertical):
+    #     raise 'tokens propose are not align'
+    #
+    # old_token_before_new = tokens_before(game.gameboard,
+    #                                      token_proposed_by_player,
+    #                                      tokens_are_align_horizontal,
+    #                                      tokens_are_align_vertical)
+    #
+    # old_token_between_new = tokens_before(game.gameboard,
+    #                                       token_proposed_by_player,
+    #                                       tokens_are_align_horizontal,
+    #                                       tokens_are_align_vertical)
+    #
+    # old_token_after_new = tokens_before(game.gameboard,
+    #                                     token_proposed_by_player,
+    #                                     tokens_are_align_horizontal,
+    #                                     tokens_are_align_vertical)
+    #
+    # word_proposed_as_list = sort(old_token_before_new +
+    #                              old_token_between_new +
+    #                              token_proposed_by_player +
+    #                              old_token_after_new)
+    #
+    # word_proposed = [each[0] for each in word_proposed_as_list]
+    #
+    # if(word_proposed in ['enfant', 'bebe', 'maman']):
+    #     # Update gameboard
+    #     # Fill current hand
+
+
+    return render(request, 'gameboard.html', {
+        "game": game,
+        "current_id_player": id_player
+    })
