@@ -23,6 +23,7 @@
       </tr>
     </table>
     <form action="{% url 'user-play-turn' game.id_game current_id_player %}" method="POST">
+      {% csrf_token %}
       <table>
         {% for line in game.gameboard %}
         <tr>
