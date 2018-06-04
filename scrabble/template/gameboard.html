@@ -21,11 +21,12 @@
       </tr>
     </table>
     <table>
-      {% for i in "x"|ljust:"15" %}
+      {% for line in game.gameboard %}
       <tr>
-        {% for j in "x"|ljust:"15" %}
+        {% for token in line %}
         <td>
           [{{ forloop.counter }};{{ forloop.parentloop.counter }}]
+          <input id="gameboard_{{ forloop.counter }}_{{ forloop.parentloop.counter }}" type="text" value="{{ token }}" size="4"/>
         </td>
         {% endfor %}
       </tr>
