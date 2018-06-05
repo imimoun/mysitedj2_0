@@ -46,21 +46,22 @@ def get_game_or_create_it(id_game, id_player):
     return id_game
 
 
-def post_to_array(post, name_input_begin_with):
-    """ Convert post value into gameboard model """
+def token_played(post, name_input_begin_with, old_gameboard):
+    """ Return list of token were not in old gameboard (with positions) """
     reponse = []
 
     for y in range(15):
         for x in range(15):
-            reponse.append([post[name_input_begin_with + '_' + str(x) + '_' + str(y)], x, y])
+            value_token = post[name_input_begin_with + '_' + str(x) + '_' + str(y)]
+            if old_gameboard[x][y] != value_token:
+                reponse.append([post[name_input_begin_with + '_' + str(x) + '_' + str(y)], x, y])
     import pdb; pdb.set_trace()
     return reponse
 
 
-
-# def token_proposed(id_game, id_player):
-#    """ Return list of new token with positions """
-    # for x in range(len()
+# def token_played(old_gameboard, new_gameboard):
+#     """ Return list of new token with positions """
+#     for x in range(len()
 
 
 

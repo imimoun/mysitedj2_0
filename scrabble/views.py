@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 
 from scrabble.models.Game import Game
 from scrabble.models.Player import Player
-from scrabble.utils import get_game_or_create_it, post_to_array
+from scrabble.utils import get_game_or_create_it, token_played
 
 
 def index(request):
@@ -35,9 +35,8 @@ def gameboard(request, id_game, id_player):
 def user_play_turn(request, id_game, id_player):
     """ A player play an valide. Check the word. Save on database. Redirect to gameboard. """
     game = Game.objects.get(id_game=id_game)
-    new_gameboard = post_to_array(request.POST, "gameboard")
+    token_played_by_player = token_played(request.POST, "gameboard", game.gameboard)
     # Check tokens played was in hand else raise error
-    # token_proposed_by_player = token_proposed(game.gameboard, id_player)
     # tokens_are_align_horizontal = are_align_horizontal(token_proposed_by_player)
     # tokens_are_align_vertical = are_align_vertical(token_proposed_by_player)
     #
