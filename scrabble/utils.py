@@ -51,9 +51,9 @@ def post_to_array(post, name_input_begin_with):
     reponse = []
 
     for y in range(15):
-        reponse.append([])
         for x in range(15):
-            reponse[y].append(post[name_input_begin_with + '_' + str(x) + '_' + str(y)])
+            reponse.append([post[name_input_begin_with + '_' + str(x) + '_' + str(y)], x, y])
+    import pdb; pdb.set_trace()
     return reponse
 
 
