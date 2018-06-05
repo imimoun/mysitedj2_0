@@ -2,7 +2,9 @@ from django.shortcuts import redirect, render
 
 from scrabble.models.Game import Game
 from scrabble.models.Player import Player
-from scrabble.utils import get_game_or_create_it, token_played
+from scrabble.utils import (get_game_or_create_it,
+                            token_played,
+                            are_align_horizontal)
 
 
 def index(request):
@@ -35,9 +37,11 @@ def gameboard(request, id_game, id_player):
 def user_play_turn(request, id_game, id_player):
     """ A player play an valide. Check the word. Save on database. Redirect to gameboard. """
     game = Game.objects.get(id_game=id_game)
-    token_played_by_player = token_played(request.POST, "gameboard", game.gameboard)
+    token_proposed_by_player = token_played(request.POST, "gameboard", game.gameboard)
     # Check tokens played was in hand else raise error
-    # tokens_are_align_horizontal = are_align_horizontal(token_proposed_by_player)
+    tokens_are_align_vertical = are_align_vertical(token_proposed_by_player)
+    import pdb; pdb.set_trace()
+
     # tokens_are_align_vertical = are_align_vertical(token_proposed_by_player)
     #
     # if (tokens_are_align_horizontal or tokens_are_align_vertical):

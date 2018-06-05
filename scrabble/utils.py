@@ -55,13 +55,13 @@ def token_played(post, name_input_begin_with, old_gameboard):
             value_token = post[name_input_begin_with + '_' + str(x) + '_' + str(y)]
             if old_gameboard[x][y] != value_token:
                 reponse.append([post[name_input_begin_with + '_' + str(x) + '_' + str(y)], x, y])
-    import pdb; pdb.set_trace()
     return reponse
 
 
-# def token_played(old_gameboard, new_gameboard):
-#     """ Return list of new token with positions """
-#     for x in range(len()
+def are_align_vertical(list_token):
+    """ Return true if all token played are align in vertical """
+    first_token = list_token[0]
+    return len(list_token) == len([each for each in list_token if each[1] == first_token[1]])
 
 
 
