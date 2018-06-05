@@ -4,6 +4,7 @@ from scrabble.models.Game import Game
 from scrabble.models.Player import Player
 from scrabble.utils import (get_game_or_create_it,
                             token_played,
+                            are_align_vertical,
                             are_align_horizontal)
 
 
@@ -40,27 +41,26 @@ def user_play_turn(request, id_game, id_player):
     token_proposed_by_player = token_played(request.POST, "gameboard", game.gameboard)
     # Check tokens played was in hand else raise error
     tokens_are_align_vertical = are_align_vertical(token_proposed_by_player)
+    tokens_are_align_horizontal = are_align_horizontal(token_proposed_by_player)
     import pdb; pdb.set_trace()
-
-    # tokens_are_align_vertical = are_align_vertical(token_proposed_by_player)
     #
     # if (tokens_are_align_horizontal or tokens_are_align_vertical):
     #     raise 'tokens propose are not align'
     #
-    # old_token_before_new = tokens_before(game.gameboard,
-    #                                      token_proposed_by_player,
-    #                                      tokens_are_align_horizontal,
-    #                                      tokens_are_align_vertical)
+    old_token_before_new = tokens_before(game.gameboard,
+                                         token_proposed_by_player,
+                                         tokens_are_align_horizontal,
+                                         tokens_are_align_vertical)
     #
-    # old_token_between_new = tokens_before(game.gameboard,
-    #                                       token_proposed_by_player,
-    #                                       tokens_are_align_horizontal,
-    #                                       tokens_are_align_vertical)
+    # old_token_between_new = tokens_between(game.gameboard,
+    #                                        token_proposed_by_player,
+    #                                        tokens_are_align_horizontal,
+    #                                        tokens_are_align_vertical)
     #
-    # old_token_after_new = tokens_before(game.gameboard,
-    #                                     token_proposed_by_player,
-    #                                     tokens_are_align_horizontal,
-    #                                     tokens_are_align_vertical)
+    # old_token_after_new = tokens_after(game.gameboard,
+#                                        token_proposed_by_player,
+#                                        tokens_are_align_horizontal,
+    #                                    tokens_are_align_vertical)
     #
     # word_proposed_as_list = sort(old_token_before_new +
     #                              old_token_between_new +

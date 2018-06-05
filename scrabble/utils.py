@@ -64,6 +64,10 @@ def are_align_vertical(list_token):
     return len(list_token) == len([each for each in list_token if each[1] == first_token[1]])
 
 
+def are_align_horizontal(list_token):
+    """ Return true if all token played are align in horizontal """
+    first_token = list_token[0]
+    return len(list_token) == len([each for each in list_token if each[2] == first_token[2]])
 
 
 
