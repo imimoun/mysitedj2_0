@@ -15,14 +15,6 @@ def init_token(id_deck):
         object_token.delete()
     return hand_player
 
-# def take_token(id_game, id_hand_player):
-#     game = Game.objects.get(id_game=id_game)
-#     deck = Deck.objects.get(id_deck=game['id_deck'])
-#     hand_player = game[id_hand_player]
-#
-#     for each in range(7 - len(hand_player)):
-#         pass
-
 
 def create_deck(id_game):
     """ At the creation of the game, the deck is fill by tokens """
@@ -52,3 +44,30 @@ def get_game_or_create_it(id_game, id_player):
                              hand_player_2=hand_player_2)
         game_selected.save()
     return id_game
+
+
+def post_to_array(post, name_input_begin_with):
+    """ Convert post value into gameboard model """
+    reponse = []
+
+    for y in range(15):
+        reponse.append([])
+        for x in range(15):
+            reponse[y].append(post[name_input_begin_with + '_' + str(x) + '_' + str(y)])
+    return reponse
+
+
+
+# def token_proposed(id_game, id_player):
+#    """ Return list of new token with positions """
+    # for x in range(len()
+
+
+
+
+
+
+
+
+
+#
