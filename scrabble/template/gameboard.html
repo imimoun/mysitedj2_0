@@ -29,9 +29,9 @@
         <tr>
           {% for token in line %}
           <td>
-            [{{ forloop.counter }};{{ forloop.parentloop.counter }}]
-            <input id="gameboard_{{ forloop.counter }}_{{ forloop.parentloop.counter }}"
-                   name="gameboard_{{ forloop.counter }}_{{ forloop.parentloop.counter }}"
+            [{{ forloop.counter|add:-1 }};{{ forloop.parentloop.counter|add:-1 }}]
+            <input id="gameboard_{{ forloop.counter|add:-1 }}_{{ forloop.parentloop.counter|add:-1 }}"
+                   name="gameboard_{{ forloop.counter|add:-1 }}_{{ forloop.parentloop.counter|add:-1 }}"
                    type="text"
                    value="{{ token }}"
                    size="4"/>
