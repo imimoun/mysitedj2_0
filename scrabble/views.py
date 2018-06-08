@@ -5,7 +5,8 @@ from scrabble.models.Player import Player
 from scrabble.utils import (get_game_or_create_it,
                             token_played,
                             are_align_vertical,
-                            are_align_horizontal)
+                            are_align_horizontal,
+                            tokens_before)
 
 
 def index(request):

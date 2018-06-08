@@ -70,9 +70,29 @@ def are_align_horizontal(list_token):
     return len(list_token) == len([each for each in list_token if each[2] == first_token[2]])
 
 
+def tokens_before(old_gameboard, token_proposed_by_player, are_horizontal, are_vertical):
+    """ Return list of token before the token proposed """
+    list_before = []
+    first_token = token_proposed_by_player[0]
 
+    if are_vertical:
+        cpt_y = first_token[2] - 1
+        word_proposed_x = first_token[1]
+        while 0 <= cpt_y and old_gameboard[word_proposed_x][cpt_y] != '':
+            list_before.append([old_gameboard[word_proposed_x][cpt_y], word_proposed_x, cpt_y])
+            cpt_y -= 1
+    elif are_horizontal:
+        cpt_x = first_token[1] - 1
+        word_proposed_y = first_token[2]
+        while 0 <= cpt_x and old_gameboard[cpt_x][word_proposed_y] != '':
+            list_before.append([old_gameboard[cpt_x][word_proposed_y], cpt_x, word_proposed_y])
+            cpt_x -= 1
+    elif not (are_vertical or are_horizontal):
+        raise "Error, must be vertical or horizontal."
+    else:
+        raise "Error, must be vertical or horizontal, not both (not supported yet)."
 
-
+    return list_before
 
 
 #
