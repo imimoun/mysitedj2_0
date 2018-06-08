@@ -14,7 +14,8 @@ class Game(models.Model):
     player_2 = models.ForeignKey(
         'Player',
         on_delete=models.CASCADE,
-        related_name="%(app_label)s_%(class)s_related"
+        related_name="%(app_label)s_%(class)s_related",
+        null=True,
     )
     hand_player_1 = ArrayField(
         models.CharField(max_length=7, choices=Token.choices()),
@@ -30,4 +31,5 @@ class Game(models.Model):
             size=15,
         ),
         size=15,
+        default=[[''] * 15] * 15
     )

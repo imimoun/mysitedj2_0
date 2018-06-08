@@ -5,31 +5,42 @@
     <table>
       <tr>
         <td>
-          abcde
-        </td>
-        <td>
-          Player 1 <br />
-          <input id="player1_valide" type="button" value="Valide" />
-        </td>
-        <td>
-          fghi
-        </td>
-        <td>
-          Player 2 <br />
-          <input id="player2_valide" type="button" value="Valide" />
-        </td>
-      </tr>
-    </table>
-    <table>
-      {% for i in "x"|ljust:"15" %}
-      <tr>
-        {% for j in "x"|ljust:"15" %}
-        <td>
-          [{{ forloop.counter }};{{ forloop.parentloop.counter }}]
-        </td>
+        {% for token in game.hand_player_1 %}
+          {{ token }} |
         {% endfor %}
+        </td>
+        <td>
+          {{ game.player_1.name }} <br />
+        </td>
+        <td>
+        {% for token in game.hand_player_2 %}
+          {{ token }} |
+        {% endfor %}
+        </td>
+        <td>
+          {{ game.player_2.name }} <br />
+        </td>
       </tr>
-      {% endfor %}
     </table>
+    <form action="{% url 'user-play-turn' game.id_game current_id_player %}" method="POST">
+      {% csrf_token %}
+      <table>
+        {% for line in game.gameboard %}
+        <tr>
+          {% for token in line %}
+          <td>
+            [{{ forloop.counter|add:-1 }};{{ forloop.parentloop.counter|add:-1 }}]
+            <input id="gameboard_{{ forloop.counter|add:-1 }}_{{ forloop.parentloop.counter|add:-1 }}"
+                   name="gameboard_{{ forloop.counter|add:-1 }}_{{ forloop.parentloop.counter|add:-1 }}"
+                   type="text"
+                   value="{{ token }}"
+                   size="4"/>
+          </td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </table>
+      <input id="player_valide" type="submit" value="Valide" />
+    </form>
   </body>
 </html>

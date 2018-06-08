@@ -1,0 +1,161 @@
+[{
+  "model": "scrabble.models.Deck",
+  "id_token": 1,
+  "fields": {
+    "id_deck": "1",
+    "token": "Q"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 2,
+  "fields": {
+    "id_deck": "1",
+    "token": "A"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 3,
+  "fields": {
+    "id_deck": "1",
+    "token": "N"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 4,
+  "fields": {
+    "id_deck": "1",
+    "token": "N"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 5,
+  "fields": {
+    "id_deck": "1",
+    "token": "F"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 6,
+  "fields": {
+    "id_deck": "1",
+    "token": "E"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 7,
+  "fields": {
+    "id_deck": "1",
+    "token": "T"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 8,
+  "fields": {
+    "id_deck": "1",
+    "token": "M"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 9,
+  "fields": {
+    "id_deck": "1",
+    "token": "B"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 10,
+  "fields": {
+    "id_deck": "1",
+    "token": "B"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 11,
+  "fields": {
+    "id_deck": "1",
+    "token": "E"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 12,
+  "fields": {
+    "id_deck": "1",
+    "token": "X"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 13,
+  "fields": {
+    "id_deck": "1",
+    "token": "Y"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 14,
+  "fields": {
+    "id_deck": "1",
+    "token": "E"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 15,
+  "fields": {
+    "id_deck": "1",
+    "token": "M"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 16,
+  "fields": {
+    "id_deck": "1",
+    "token": "X"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 17,
+  "fields": {
+    "id_deck": "1",
+    "token": "M"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 18,
+  "fields": {
+    "id_deck": "1",
+    "token": "M"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 19,
+  "fields": {
+    "id_deck": "1",
+    "token": "A"
+  }
+},
+{
+  "model": "scrabble.models.Deck",
+  "id_token": 20,
+  "fields": {
+    "id_deck": "1",
+    "token": "A"
+  }
+}
+]

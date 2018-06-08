@@ -1,35 +1,35 @@
 from enum import Enum
 
 
-class Token(Enum):   # A subclass of Enum
-    joker = 0
-    token_A = 1
-    token_B = 3
-    token_C = 3
-    token_D = 2
-    token_E = 1
-    token_F = 4
-    token_G = 2
-    token_H = 4
-    token_I = 1
-    token_J = 8
-    token_K = 10
-    token_L = 1
-    token_M = 2
-    token_N = 1
-    token_O = 1
-    token_P = 3
-    token_Q = 8
-    token_R = 1
-    token_S = 1
-    token_T = 1
-    token_U = 1
-    token_V = 4
-    token_W = 10
-    token_X = 10
-    token_Y = 10
-    token_Z = 10
+class Token(Enum):
+    joker = ("joker", 0)
+    token_A = ("A", 1)
+    token_B = ("B", 3)
+    token_C = ("C", 3)
+    token_D = ("D", 2)
+    token_E = ("E", 1)
+    token_F = ("F", 4)
+    token_G = ("G", 2)
+    token_H = ("H", 4)
+    token_I = ("I", 1)
+    token_J = ("J", 8)
+    token_K = ("K", 10)
+    token_L = ("L", 1)
+    token_M = ("M", 2)
+    token_N = ("N", 1)
+    token_O = ("O", 1)
+    token_P = ("P", 3)
+    token_Q = ("Q", 8)
+    token_R = ("R", 1)
+    token_S = ("S", 1)
+    token_T = ("T", 1)
+    token_U = ("U", 1)
+    token_V = ("V", 4)
+    token_W = ("W", 10)
+    token_X = ("X", 10)
+    token_Y = ("Y", 10)
+    token_Z = ("Z", 10)
 
     @classmethod
     def choices(cls):
-        return tuple((token[1].value, token[0]) for token in cls.__members__.items())
+        return [(each.value[0], each.value[0]) for each in cls.__members__.values()]
